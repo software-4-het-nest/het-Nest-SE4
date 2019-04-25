@@ -53,14 +53,14 @@ public class HetNestApplicationInitDB implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-//        List<User> users = Arrays.asList(
-//                new User(1, "tibovds", "test", "Tibo", "Van De Sijpe", "Administrator")
-//        );
-//
-//
-//        for (User user: users) {
-//            // user must be saved for it to have an id
-//            userRepository.save(user);
-//        }
+        List<User> users = Arrays.asList(
+                new User(1, "tibovds", "test", "Tibo", "Van De Sijpe", "Administrator")
+        );
+
+
+        for (User user: users) {
+            // user must be saved for it to have an id
+            userRepository.save(user);
+        }
     }
 }

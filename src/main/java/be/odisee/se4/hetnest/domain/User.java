@@ -19,11 +19,11 @@ public class User implements UserDetails {
     private final int id;
 
     @Column(unique = true)
-    private String username;
-    private String password;
-    private String firstName;
-    private String lastName;
-    private String role;
+    private final String username;
+    private final String password;
+    private final String firstName;
+    private final String lastName;
+    private final String role;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
