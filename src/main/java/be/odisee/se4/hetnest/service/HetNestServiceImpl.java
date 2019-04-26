@@ -1,14 +1,20 @@
 package be.odisee.se4.hetnest.service;
 
-import be.odisee.se4.hetnest.domain.Aanbieding;
-import be.odisee.se4.hetnest.domain.Brouwsel;
-import be.odisee.se4.hetnest.domain.Ingredient;
+import be.odisee.se4.hetnest.dao.*;
+import be.odisee.se4.hetnest.domain.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.*;
+
+import java.util.List;
 
 /**
  * @author User
  * @version 1.0
  * @created 17-Mar-2019 14:19:05
  */
+@Service("hetNestService")
+@Transactional(propagation = Propagation.SUPPORTS, readOnly=true)
 public class HetNestServiceImpl implements HetNestService {
 
 	public Ingredient m_Ingredient;
@@ -102,5 +108,13 @@ public class HetNestServiceImpl implements HetNestService {
 	public void aanbiedingenVraagOp(){
 
 	}
+
+	@Autowired
+	private UserRepository userrepository = null;
+
+	public List<User> geefAllePersonen() {
+		return userrepository.findAll();
+	}
+
 
 }

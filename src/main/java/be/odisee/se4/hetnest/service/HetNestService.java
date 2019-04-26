@@ -1,10 +1,15 @@
 package be.odisee.se4.hetnest.service;
 
+import be.odisee.se4.hetnest.domain.User;
+
+import java.util.List;
+
 /**
  * @author User
  * @version 1.0
  * @created 17-Mar-2019 14:19:01
  */
+
 public interface HetNestService {
 
 	public void voorraadVoegToe();
@@ -49,4 +54,5 @@ public interface HetNestService {
 
 	public void aanbiedingenVraagOp();
 
+	public List<User> geefAllePersonen();
 }

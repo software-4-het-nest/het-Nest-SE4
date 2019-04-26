@@ -1,8 +1,8 @@
 package be.odisee.se4.hetnest.domain;
 
 import lombok.*;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
+/*import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;*/
 
 import javax.persistence.*;
 import java.util.Collection;
@@ -12,7 +12,7 @@ import java.util.Collection;
 @Data
 @RequiredArgsConstructor
 @NoArgsConstructor(access= AccessLevel.PRIVATE,force=true)
-public class User implements UserDetails {
+public class User /*implements UserDetails*/ {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -25,22 +25,22 @@ public class User implements UserDetails {
     private final String lastName;
     private final String role;
 
-    @Override
+    /*@Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;
-    }
+    }*/
 
-    @Override
+    //@Override
     public String getPassword() {
         return null;
     }
 
-    @Override
+    //@Override
     public String getUsername() {
         return null;
     }
 
-    @Override
+    /*@Override
     public boolean isAccountNonExpired() {
         return false;
     }
@@ -58,7 +58,7 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return false;
-    }
+    }*/
 
 
 }

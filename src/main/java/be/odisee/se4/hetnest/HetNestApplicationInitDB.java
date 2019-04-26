@@ -54,7 +54,7 @@ public class HetNestApplicationInitDB implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         List<User> users = Arrays.asList(
-                new User(1, "tibovds", "test", "Tibo", "Van De Sijpe", "Administrator")
+                new User(66, "tibovds", "test", "Tibo", "Van De Sijpe", "Administrator")
         );
 
 
